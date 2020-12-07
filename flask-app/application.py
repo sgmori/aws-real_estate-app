@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 
-application = app = Flask(__name__)
+application = Flask(__name__)
 
 @application.route('/')
 def index():
@@ -8,7 +8,7 @@ def index():
 
 @application.route('/showLineChart')
 def line():
-    return render_template('index.html')
+    return flask.render_template('index.html')
 
 if __name__ == '__main__':
     application.run(debug=True)

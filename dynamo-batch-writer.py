@@ -23,7 +23,7 @@ def read_csv(csv_file, list):
 if __name__ == '__main__':
     
     table_name = 'maricopa-sales-data'
-    file_name = 'MaricopaPropertySales_Jan.csv'
+    file_name = '/data/MaricopaPropertySales_Jan.csv'
     items = []
     
     read_csv(file_name, items)

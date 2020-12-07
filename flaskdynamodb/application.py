@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 import aws_controller
 import os
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 
 @app.route('/')
 def index():

@@ -8,7 +8,7 @@ def index():
 
 @application.route('/showLineChart')
 def line():
-    return flask.render_template('index.html')
+    return Flask.render_template('index.html')
 
 if __name__ == '__main__':
     application.run(debug=True)

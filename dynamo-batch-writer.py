@@ -4,8 +4,8 @@ import csv
 dynamodb = boto3.resource('dynamodb', 'us-west-2')
 
 
-def batch_writer(table_name, rows):
-    table = dynamodb.Table(table_name)
+def batch_writer(t_name, rows):
+    table = dynamodb.Table(t_name)
     
     with table.batch_writer() as batch:
         for row in rows:

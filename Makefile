@@ -6,8 +6,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=flaskdynamodb tests/*.py
-	python -m pytest -vv *.py
+	python -m pytest -vv tests/*.py
 
 lint:
 	pylint --disable=R,C aws-real_estate-app flaskdynamodb

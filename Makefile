@@ -9,7 +9,7 @@ test:
 	python -m pytest tests/*.py
 
 lint:
-	pylint --disable=R,C aws-real_estate-app flaskdynamodb
+	pylint --disable=R,C flaskdynamodb dynamo-batch-writer
 
 all: install lint test
 

@@ -1,4 +1,9 @@
-from flaskdynamodb import hello
+import sys
+
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, '/flaskdynamodb')
+
+import hello
 
 def test_h2():
-    assert h2()  == 1
+    assert hello.h2()  == 1

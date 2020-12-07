@@ -1,17 +1,13 @@
-from flask import Flask, request
-from flask_restful import Resource, Api
+from flask import Flask, request, render_template
 
 application = app = Flask(__name__)
-api = Api(app)
 
-class HelloWorld(Resource):
-    def get(self):
-        return {'about': 'Hello World!'}
-        
-api.add_resource(HelloWorld, '/')
+@application.route('/')
+def index():
+    return "This is the main page."
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
 
 
 

@@ -13,11 +13,11 @@ def batch_writer(t_name, rows):
     return True
     
     
-def read_csv(csv_file, list):
+def read_csv(csv_file, csv_list):
     rows = csv.DictReader(open(csv_file))
     
     for row in rows:
-        list.append(row)
+        csv_list.append(row)
         
         
 if __name__ == '__main__':

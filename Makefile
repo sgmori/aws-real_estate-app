@@ -3,5 +3,5 @@ install:
 lint:
 	pylint --disable=R,C *.py
 test:
-	pytest -vv --cov=flaskdynamodb tests/*.py
+	pytest tests/*.py
 

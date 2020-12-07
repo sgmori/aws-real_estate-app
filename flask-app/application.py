@@ -6,7 +6,7 @@ application = app = Flask(__name__)
 def index():
     return "This is the main page."
 
-@app.route('/showLineChart')
+@application.route('/showLineChart')
 def line():
     return render_template('index.html')
 

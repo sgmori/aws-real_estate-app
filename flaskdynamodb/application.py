@@ -6,6 +6,10 @@ application = app = Flask(__name__)
 def index():
     return "This is the main page."
 
+@app.route('/Charts')
+def line():
+    return render_template('index.html')
+
 if __name__ == '__main__':
     application.run(debug=True)
 

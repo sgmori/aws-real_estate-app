@@ -9,7 +9,7 @@ test:
 	python -m pytest tests/*.py
 
 lint:
-	pylint --disable=R,C flaskdynamodb dynamo-batch-writer
+	pylint --disable=R,C flask-app dynamo-batch-writer
 
 all: install lint test
 

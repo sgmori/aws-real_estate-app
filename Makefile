@@ -1,7 +1,17 @@
+setup:
+	python3 -m venv ~/.aws-real_estate-app
+
 install:
-	pip install -r requirements.txt
-lint:
-	pylint --disable=R,C *.py
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
+
 test:
-	pytest tests/*.py
+	python -m pytest -vv --cov=flaskdynamodb tests/*.py
+	python -m pytest -vv *.py
+
+lint:
+	pylint --disable=R,C aws-real_estate-app flaskdynamodb
+
+all: install lint test
+
 
